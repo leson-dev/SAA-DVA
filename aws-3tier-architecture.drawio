@@ -83,19 +83,34 @@
           <mxGeometry height="78" width="78" x="1271" y="1320" as="geometry" />
         </mxCell>
         <mxCell id="migration" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" value="DB Migration Task&#xa;(one-off, CI/CD)" vertex="1">
-          <mxGeometry height="78" width="78" x="1481" y="1320" as="geometry" />
+          <mxGeometry height="78" width="78" x="1522" y="1350" as="geometry" />
         </mxCell>
         <mxCell id="e1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="route53">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="120" />
+              <mxPoint x="650" y="120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e2" edge="1" parent="1" source="route53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="waf">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="310" />
+              <mxPoint x="1110" y="310" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e3" edge="1" parent="1" source="waf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="alb">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e4" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="amplify">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="120" />
+              <mxPoint x="840" y="120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e5" edge="1" parent="1" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ecsA">
           <mxGeometry relative="1" as="geometry" />
@@ -122,16 +137,34 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e13" edge="1" parent="1" source="ghactions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="migration" value="trigger one-off migrate">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1549.5" y="704" />
+              <mxPoint x="1630" y="704" />
+              <mxPoint x="1630" y="1320" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e14" edge="1" parent="1" source="migration" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;exitX=0.5;exitY=0;entryX=1;entryY=0.7;" target="rdsP">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e15" edge="1" parent="1" source="acm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" target="alb">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e15" edge="1" parent="1" source="acm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;entryX=1;entryY=0.3;" target="alb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="225" />
+              <mxPoint x="1220" y="523.38" />
+            </Array>
+            <mxPoint x="1190" y="225" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="e16" edge="1" parent="1" source="acm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;exitX=0.5;exitY=1;entryX=1;entryY=0.3;" target="amplify">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e16" edge="1" parent="1" source="acm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="amplify">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="225" />
+              <mxPoint x="879" y="224" />
+            </Array>
+            <mxPoint x="1040" y="208.38" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
